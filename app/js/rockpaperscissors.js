@@ -87,13 +87,15 @@ function playToFive() {
         var win = getWinner(playerMove, computerMove);
         if (win==='player'){
             playerWins++;
-            console.log('Player won! Player chose ' + playerMove + ' while Computer chose ' + computerMove + '\n');
+            console.log('Player won! Player chose ' + playerMove + ' and the computer chose ' + computerMove);
         } 
-        if (win==='computer'){
+         else if (win==='computer'){
             computerWins+=1;
-            console.log('Computer won! Player chose ' + playerMove + ' while Computer chose ' + computerMove + '\n'
-                );
+            console.log('The computer won! Player chose ' + playerMove + ' and the computer chose ' + computerMove);
+        } else {
+            console.log( "It's a tie! the score remains the same ")
         }
+        console.log (' The score is currently' + playerWins + ' - ' + computerWins + '\n')
     }
     return [playerWins, computerWins];
 }
